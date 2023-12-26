@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+//import './Square-logo';
 
 
 /*function App() {
@@ -18,7 +19,9 @@ function Square({ value, onSquareClick }) {
   return (
     <button className="square" onClick={onSquareClick}>
       {value}
+      
     </button>
+   
   );
 }
 
@@ -41,7 +44,7 @@ function Board({ xIsNext, squares, onPlay }) {
   if (winner) {
     status = 'Winner: ' + winner;
   } else {
-    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+    status = 'Proximo Jogador: ' + (xIsNext ? 'X' : 'O');
   }
 
   return (
@@ -85,9 +88,9 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = 'Go to move #' + move;
+      description = 'Mova-se#' + move;
     } else {
-      description = 'Go to game start';
+      description = 'Voltar ao Inicio do Jogo';
     }
     return (
       <li key={move}>
